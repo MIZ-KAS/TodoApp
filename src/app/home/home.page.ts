@@ -30,13 +30,8 @@ async updateTask(index: any) {
       header: 'Update Task?',
       message: 'Type in your new task to update.',
       inputs: [{ name: 'editTask', placeholder: 'Task' }],
-      buttons: [ { text: 'Cancel', role: 'cancel' }, { text: 'Update', handler: (index : any) => { this.taskList.get(this.taskList[index])} },      ]
-      // buttons: [{ text: 'Cancel', role: 'cancel' },
-      //           { text: 'Update', handler: (data : any)=> {
-      //               this.taskList[index] = data.editTask; }
-      //           }
-      //          ]
-      // {this.taskList[index] = this.taskList.setItem}
+      buttons: [ { text: 'Cancel', role: 'cancel' }, { text: 'Update', handler: (index : any) => { this.taskList.get(this.taskList[index])} },      
+    ]
   });
   await alert.present();
 }
